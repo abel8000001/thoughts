@@ -1,7 +1,7 @@
 ---
 title: "To Pimp a Butterfly"
 author: "Kendrick Lamar"
-cover: "/src/content/music/to-pimp-a-butterfly/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">To Pimp a Butterfly</h1>
 <h2 class="album-page-author">by Kendrick Lamar</h2>

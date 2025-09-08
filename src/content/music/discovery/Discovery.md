@@ -1,7 +1,7 @@
 ---
 title: "Discovery"
 author: "Daft Punk"
-cover: "/src/content/music/discovery/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Discovery</h1>
 <h2 class="album-page-author">by Daft Punk</h2>

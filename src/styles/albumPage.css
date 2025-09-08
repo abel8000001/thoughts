@@ -1,0 +1,16 @@
+.album-page-title {
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.album-page-author {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.album-page-video {
+  display: block;
+  margin: 0 auto;
+  max-width: 15rem;
+  max-height: 15rem;
+}

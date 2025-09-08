@@ -1,7 +1,7 @@
 ---
 title: "The College Dropout"
 author: "Kanye West"
-cover: "/src/content/music/the-college-dropout/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">The College Dropout</h1>
 <h2 class="album-page-author">by Kanye West</h2>

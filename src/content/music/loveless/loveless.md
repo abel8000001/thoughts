@@ -1,7 +1,7 @@
 ---
 title: "loveless"
 author: "my bloody valentine"
-cover: "/src/content/music/loveless/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">loveless</h1>
 <h2 class="album-page-author">by my bloody valentine</h2>

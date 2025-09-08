@@ -1,7 +1,7 @@
 ---
 title: "Hurry Up Tomorrow"
 author: "The Weeknd"
-cover: "/src/content/music/hurry-up-tomorrow/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Hurry Up Tomorrow</h1>
 <h2 class="album-page-author">by The Weeknd</h2>

@@ -1,6 +1,5 @@
 #music {
   padding: 2rem;
-  position: relative;
 }
 
 #albums-title {
@@ -31,36 +30,9 @@
   text-decoration: none;
 }
 
-.anchor {
-  color: rgb(225, 255, 225);
-  text-decoration: none;
-}
-
-.anchor:hover {
-  text-decoration: underline;
-}
-
-.album-page-title {
-  margin: 0 0 1rem 0;
-  text-align: center;
-}
-
-.album-page-author {
-  margin: 0 0 2rem 0;
-  text-align: center;
-}
-
-.album-page-video {
-  display: block;
-  margin: 0 auto;
-  max-width: 15rem;
-  max-height: 15rem;
-}
-
 #more-on-the-way-message {
-  position: absolute;
-  bottom: 0;
-  right: 10px;
+  margin: 0;
+  text-align: end;
   font-size: 1rem;
   color: rgb(62, 110, 62);
 }

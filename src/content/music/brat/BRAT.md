@@ -1,7 +1,7 @@
 ---
 title: "BRAT"
 author: "Charli xcx"
-cover: "/src/content/music/brat/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">BRAT</h1>
 <h2 class="album-page-author">by Charli xcx</h2>

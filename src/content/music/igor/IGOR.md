@@ -1,7 +1,7 @@
 ---
 title: "IGOR"
 author: "Tyler, the Creator"
-cover: "/src/content/music/igor/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">IGOR</h1>
 <h2 class="album-page-author">by Tyler, the Creator</h2>

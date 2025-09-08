@@ -1,7 +1,7 @@
 ---
 title: "Dawn FM"
 author: "The Weeknd"
-cover: "/src/content/music/dawn-fm/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Dawn FM</h1>
 <h2 class="album-page-author">by The Weeknd</h2>

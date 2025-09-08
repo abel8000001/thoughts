@@ -1,7 +1,7 @@
 ---
 title: "Unknown Death 2002"
 author: "Yung Lean"
-cover: "/src/content/music/unknown-death-2002/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Unknown Death 2002</h1>
 <h2 class="album-page-author">by Yung Lean</h2>

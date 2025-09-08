@@ -1,7 +1,7 @@
 ---
 title: "Alligator Bites Never Heal"
 author: "Doechii"
-cover: "/src/content/music/alligator-bites-never-heal/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Alligator Bites Never Heal</h1>
 <h2 class="album-page-author">by Doechii</h2>

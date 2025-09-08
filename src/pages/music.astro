@@ -3,7 +3,34 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/music.css";
 
-const albums = (await getCollection("music")) as CollectionEntry<"music">[];
+const rawAlbums = (await getCollection("music")) as CollectionEntry<"music">[];
+
+const coverModules = import.meta.glob("../content/music/*/cover.jpg", {
+    eager: true,
+    query: "?url",
+    import: "default",
+}) as Record<string, string>;
+const coverByFolder: Record<string, string> = {};
+for (const p in coverModules) {
+    const m = p.match(/content\/music\/(.+?)\/cover\.jpg$/);
+    if (m) coverByFolder[m[1]] = coverModules[p];
+}
+
+const albums = await Promise.all(
+    rawAlbums.map(async (album) => {
+        const folder = album.id.split("/")[0];
+        let resolvedCover = coverByFolder[folder];
+
+        return { ...album, folder, resolvedCover };
+    }),
+);
+
+// Sort albums by title (case-insensitive)
+albums.sort((a, b) =>
+    a.data.title.localeCompare(b.data.title, undefined, {
+        sensitivity: "base",
+    }),
+);
 ---
 
 <BaseLayout>
@@ -13,10 +40,11 @@ const albums = (await getCollection("music")) as CollectionEntry<"music">[];
             {
                 albums.map((album) => (
                     <li class="album-item">
-                        <a href={`/thoughts/music/${album.slug}/`}>
-                            {album.data.cover && (
+                        <a href={`/thoughts/music/${album.folder}/`}>
+                            {album.resolvedCover && (
                                 <img
-                                    src={album.data.cover}
+                                    class="album-cover"
+                                    src={album.resolvedCover}
                                     alt={`${album.data.title} cover`}
                                     width="100"
                                 />
@@ -27,8 +55,6 @@ const albums = (await getCollection("music")) as CollectionEntry<"music">[];
                 ))
             }
         </ul>
-        <div id="more-on-the-way-message">
-            <p>don't worry, (many) more on the way</p>
-        </div>
+        <p id="more-on-the-way-message">don't worry, (many) more on the way</p>
     </div>
 </BaseLayout>

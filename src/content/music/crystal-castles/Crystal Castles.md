@@ -1,7 +1,7 @@
 ---
 title: "Crystal Castles"
 author: "Crystal Castles"
-cover: "/src/content/music/crystal-castles/cover.jpg"
+cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Crystal Castles</h1>
 <h2 class="album-page-author">by Crystal Castles</h2>

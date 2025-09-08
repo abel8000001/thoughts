@@ -2,11 +2,12 @@
 import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/music.css";
+import "../../styles/albumPage.css"; 
 
 export async function getStaticPaths() {
   const albums = await getCollection("music");
   return albums.map((album: CollectionEntry<"music">) => ({
-    params: { album: album.slug },
+    params: { album: album.id.split("/")[0] },
     props: album,
   }));
 }
@@ -18,5 +19,7 @@ const { Content } = await album.render();
 ---
 
 <BaseLayout>
-  <Content />
+  <div style="padding: 2rem 1rem 1rem 1rem;">
+    <Content />
+  </div>
 </BaseLayout>
