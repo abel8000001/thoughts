@@ -1,0 +1,22 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/music.css";
+
+export async function getStaticPaths() {
+  const albums = await getCollection("music");
+  return albums.map((album: CollectionEntry<"music">) => ({
+    params: { album: album.slug },
+    props: album,
+  }));
+}
+
+type Props = CollectionEntry<"music">;
+
+const album = Astro.props;
+const { Content } = await album.render();
+---
+
+<BaseLayout>
+  <Content />
+</BaseLayout>

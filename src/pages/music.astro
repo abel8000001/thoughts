@@ -1,0 +1,34 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/music.css";
+
+const albums = (await getCollection("music")) as CollectionEntry<"music">[];
+---
+
+<BaseLayout>
+    <div id="music">
+        <h1 id="albums-title">Albums</h1>
+        <ul id="album-grid">
+            {
+                albums.map((album) => (
+                    <li class="album-item">
+                        <a href={`/thoughts/music/${album.slug}/`}>
+                            {album.data.cover && (
+                                <img
+                                    src={album.data.cover}
+                                    alt={`${album.data.title} cover`}
+                                    width="100"
+                                />
+                            )}
+                            <p>{album.data.title}</p>
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+        <div id="more-on-the-way-message">
+            <p>don't worry, (many) more on the way</p>
+        </div>
+    </div>
+</BaseLayout>

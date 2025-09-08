@@ -1,0 +1,35 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Play-Bold:wght@700&family=Raleway&display=swap"
+            rel="stylesheet"
+        />
+        <title>abel's blog</title>
+    </head>
+    <body>
+        <header id="header">
+            <a href="/thoughts" id="title"><h1>abel's thoughts</h1></a>
+        </header>
+        <main>
+            <div id="tabs">
+                <a href="/thoughts/music/" class="tab">music</a>
+                <a href="/thoughts/movies/" class="tab">movies</a>
+            </div>
+            <div id="window">
+                <div id="window-content">
+                    <slot />
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
