@@ -5,7 +5,7 @@ cover: "./cover.jpg"
 ---
 <h1 class="album-page-title">Crystal Castles</h1>
 <h2 class="album-page-author">by Crystal Castles</h2>
-<iframe class="album-page-video" width="512px" height="512px" src="https://www.youtube.com/embed/91CgneMIe_A?si=2b05Had4ZUlmZ7u0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+<iframe class="album-page-video" width="512px" height="512px" src="https://www.youtube.com/embed/m_ZeOmmE_ec?si=Ma_SrkTWpvYHyk7b" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
 ### Personal highlights:
 * Untrust Us
